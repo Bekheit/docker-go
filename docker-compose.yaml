@@ -1,0 +1,22 @@
+version: "3.8"
+services:
+#  cockroachdb:
+#    image: 'cockroachdb/cockroach'
+#    ports:
+#      - '26257:26257'
+#      - '8080:8080'
+#    command: start-single-node --insecure
+#    volumes:
+#      - roach1:/cockroach/cockroach-data
+
+  app:
+    build: ./
+    ports:
+      - '8000:8080'
+    volumes:
+      - ./:/app
+#    depends_on:
+#      - cockroachdb
+
+#volumes:
+#  roach1:

@@ -2,6 +2,7 @@ FROM golang:latest
 
 WORKDIR /app
 
+
 COPY go.mod /app
 COPY go.sum /app
 
@@ -11,4 +12,4 @@ COPY . /app
 
 EXPOSE 8080
 
-CMD ["go", "run", "main.go"]
+CMD ["go", "run", "./cmd/main.go"]
